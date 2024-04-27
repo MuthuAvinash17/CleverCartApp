@@ -10,8 +10,16 @@ import { Footer } from './Components/Footer/Footer';
 import men_banner from './Components/Assets/banner_mens.png'
 import women_banner from './Components/Assets/banner_women.png'
 import kid_banner from './Components/Assets/banner_kids.png'
+import axios from 'axios'
 
 function App() {
+  axios.defaults.withCredentials=true;
+  const handleSubmit = (e) => {
+    e.prevenrDefault();
+    axios.post('https://clever-cart-app.vercel.app/', {name, email, password})
+    .then(result => console.log(result))
+    .catch(err => console.log(err))
+  }
   return (
     <div>
       <BrowserRouter>
