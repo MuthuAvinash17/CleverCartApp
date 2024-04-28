@@ -11,13 +11,7 @@ const cors = require ('cors'); //to provide access to react project
 
 
 app.use(express.json());
-app.use(cors(
-    {
-        origin: ["https://clever-cart-app.vercel.app/"],
-        methods: ["POST", "GET"],
-        credentials:true
-    }
-));
+app.use(cors());
 
 //Database Connection with  MongoDB
 mongoose.connect(process.env.MONGODB_URL);

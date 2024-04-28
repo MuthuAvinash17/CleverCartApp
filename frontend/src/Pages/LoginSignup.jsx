@@ -18,7 +18,7 @@ export const LoginSignup = () => {
     console.log("Login function executed", formData);
 
     let responseData;
-    await fetch('http://localhost:4000/login',{
+    await fetch("http://localhost:4000/login",{
       method:'POST',
       headers:{
         Accept: 'application/form-data',
@@ -40,7 +40,7 @@ export const LoginSignup = () => {
     console.log("Signup function Executed", formData);
 
     let responseData;
-    await fetch('http://localhost:4000/signup',{
+    await fetch("http://localhost:4000/signup",{
       method:'POST',
       headers:{
         Accept: 'application/form-data',
