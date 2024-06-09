@@ -11,7 +11,13 @@ const cors = require ('cors'); //to provide access to react project
 
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+    {
+        origin: [""],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 
 //Database Connection with  MongoDB
 mongoose.connect(process.env.MONGODB_URL);
