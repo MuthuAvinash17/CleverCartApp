@@ -13,7 +13,7 @@ const cors = require ('cors'); //to provide access to react project
 app.use(express.json());
 app.use(cors(
     {
-        origin: [""],
+        origin: ["https://clever-cart-app-frontend.vercel.app"],
         methods: ["POST", "GET"],
         credentials: true
     }
